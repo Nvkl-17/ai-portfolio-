@@ -1,0 +1,293 @@
+/* ===== Google Fonts ===== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Nunito:wght@400;600&display=swap');
+
+:root {
+  --bg-color: #f7f1f2;
+  --text-color: #222;
+  --card-bg: #8ca8f5;
+  --accent-color: #38353d;
+  --accent-gradient: linear-gradient(135deg, #7b2ff7, #f107a3);
+}
+
+body.dark {
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+  --card-bg: #312e2e;
+  --accent-color: #e9f6ec;
+  --accent-gradient: linear-gradient(135deg, #ff8c00, #ff3c00);
+}
+
+
+
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10;
+  font-family: 'Nunito', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.4s, color 0.4s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.75rem;
+  padding: 1rem 5rem;
+  background: var(--card-bg);
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 9.9rem;
+  color: var(--accent-color);
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+/* ===== Toggle Button ===== */
+.toggle-btn {
+  cursor: pointer;
+  background: var(--accent-gradient);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(123, 47, 247, 0.4);
+}
+
+/* ===== Sections ===== */
+
+.avatar img {
+  width: 480px;
+  height: 480px;
+  
+  border: 5px solid var(--accent-color);
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+#res
+{ 
+  top : 0px;
+
+}
+.section {
+  min-height: 80vh;
+  padding: 40px 20px 20px;
+  text-align: center;
+}
+
+.home-content {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+
+.home-content .text {
+  font-size: 1.5rem;
+  max-width: 1000px;
+  text-align: left;
+}
+
+.home-content .tagline
+{
+  font-family: "Lucida Console",monospace;
+}
+.home-content .about-me{
+  font-size: 1.5rem;
+}
+
+#home h1 {
+  font-size: 5rem;
+  font-family: "Montserrat", sans-serif ;
+}
+
+#home span {
+  color: #0078ff;
+}
+
+.tagline {
+  font-weight: 500;
+  color: #555;
+  margin: 8px 0 16px;
+}
+
+.about-me {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* ===== Social Links ===== */
+.social-links a {
+  width: 32px;
+  height: 32px;
+  margin: 8px;
+  color: var(--accent-color);
+  transition:0.3s;
+}
+
+.social-links a:hover {
+  transform: translateY(-6px);
+}
+
+.social-links img {
+  width: 32px;
+  height: 32px;
+  margin: 8px;
+  transition: all 0.3s ease;
+}
+
+/* ===== Fancy Buttons ===== */
+.btn {
+  margin-top: 1.5rem;
+  background: var(--accent-gradient);
+  color: white;
+  padding: 0.9rem 1.8rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(123, 47, 247, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 25px rgba(123, 47, 247, 0.5);
+}
+
+/* ===== Cards (Projects + Certifications) ===== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: fill;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  margin: 0.8rem 0 0.4rem 0;
+  color: var(--accent-color);
+}
+
+.card p {
+  font-size: 0.97rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+/* ===== GitHub Link Button ===== */
+.github-link {
+  display: inline-block;
+  margin-top: 0.7rem;
+  text-decoration: none;
+  background: var(--accent-gradient);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.github-link:hover {
+  box-shadow: 0 0 15px rgba(123, 47, 247, 0.4);
+  transform: translateY(-3px);
+}
+
+/* CERTIFICATIONS */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.cert-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.cert-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.cert-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.cert-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: var(--card-bg);
+  color: var(--text-color);
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
